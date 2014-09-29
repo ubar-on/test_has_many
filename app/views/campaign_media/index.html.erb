@@ -1,0 +1,27 @@
+<h1>Listing campaign_media</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Campaign</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @campaign_media.each do |campaign_medium| %>
+      <tr>
+        <td><%= campaign_medium.name %></td>
+        <td><%= campaign_medium.campaign %></td>
+        <td><%= link_to 'Show', campaign_medium %></td>
+        <td><%= link_to 'Edit', edit_campaign_medium_path(campaign_medium) %></td>
+        <td><%= link_to 'Destroy', campaign_medium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Campaign medium', new_campaign_medium_path %>
