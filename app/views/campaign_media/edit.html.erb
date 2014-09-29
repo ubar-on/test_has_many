@@ -1,6 +1,5 @@
-<h1>Editing campaign_medium</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @campaign_medium %> |
-<%= link_to 'Back', campaign_media_path %>
+<%- model_class = CampaignMedium -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => CampaignMedium %></h1>
+</div>
+<%= render :partial => 'form' %>
